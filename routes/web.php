@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +16,16 @@ use App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts');
+Route::get('/', [MainController::class, 'index']);
+
+Auth::routes();
+
+Route::group(['middleware' => 'Admin'], function(){
+    Route::get('/dashboard', [ProfileController::class, 'dashboardindex'])->name('dashboard');
+
+    Route::get('/dashboard/about', [ProfileController::class, 'index'])->name('dashboard.about');
+    Route::post('/dashboard/about', [ProfileController::class, 'profileinsertion'])->name('dashboard.about.store');
+    Route::delete('/dashboard/about', [ProfileController::class, 'profiledeletion'])->name('dashboard.about.delete');
 });
 
-Route::get('/', [AboutController::class, 'index']);
-
-Route::get('/login', [AdminController::class, 'loginindex']);
-Route::post('/login', [AdminController::class, 'login'])->name('loginsubmit');
-
-Route::get('/dashboard', function(){
-    return view('admin.dashboard');
-});
-
-Route::resource('/admin/about', Admin\AboutController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
