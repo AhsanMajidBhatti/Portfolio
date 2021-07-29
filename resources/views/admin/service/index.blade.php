@@ -12,22 +12,24 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Skill</th>
-            <th scope="col">Percentage</th>
+            <th scope="col">Title</th>
+            <th scope="col">URL</th>
+            <th scope="col">Overview</th>
             <th scope="col" colspan="2">Action</th>
         </tr>
     </thead>
     <tbody>
-        @forelse($skills as $skill)
+        @forelse($services as $service)
             <tr>
-                <td>{{ $skill->id }}</td>
-                <td>{{ $skill->skillname }}</td>
-                <td>{{ $skill->percentage }}</td>
+                <td>{{ $service->id }}</td>
+                <td>{{ $service->title }}</td>
+                <td>{{ $service->linkurl }}</td>
+                <td>{!! $service->smalloverview !!}</td>
                 <td>
-                    <a href="{{ route('skill.edit', $skill->id) }}">
+                    <a href="{{ route('service.edit', $service->id) }}">
                         <button class="btn btn-primary btn-sm">EDIT</button>
                     </a>
-                    <form action="{{ route('skill.destroy', $skill->id) }}" method="POST" class="btn btn-sm">
+                    <form action="{{ route('service.destroy', $service->id) }}" method="POST" class="btn btn-sm">
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?');">DANGER</button>
@@ -35,9 +37,8 @@
                 </td>
             </tr>
         @empty
-            <td>No Skills</td>
+            <td>No Services</td>
         @endforelse
-
     </tbody>
 </table>
 

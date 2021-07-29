@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\EducationController;
+use App\Http\Controllers\Admin\ExperienceController;
+use App\Http\Controllers\Admin\CertificationController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\MainController;
 
 /*
@@ -31,6 +34,9 @@ Route::group(['middleware' => 'Admin'], function(){
 
     Route::resource('/dashboard/skill', SkillController::class);
     Route::resource('/dashboard/education', EducationController::class);
+    Route::resource('/dashboard/experience', ExperienceController::class);
+    Route::resource('/dashboard/certification', CertificationController::class);
+    Route::resource('/dashboard/service', ServiceController::class);
 
 });
 
