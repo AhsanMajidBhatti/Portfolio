@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ secure_asset('assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ secure_asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -19,15 +19,15 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('assets/css/style.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: MyResume - v4.3.0
@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-lg-4">
 
-                        <img src="{{ asset('assets/img/Ahsan-pic.jpg') }}" class="img-fluid" alt="">
+                        <img src="{{ secure_asset('assets/img/Ahsan-pic.jpg') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content">
                         <h3>Full-Stack Web Developer.</h3>
@@ -335,18 +335,18 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('assets/vendor/purecounter/purecounter.js') }}"></script>
-    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/typed.js/typed.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/purecounter/purecounter.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/typed.js/typed.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/main.js') }}"></script>
 
 </body>
 
